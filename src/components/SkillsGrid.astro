@@ -1,0 +1,140 @@
+---
+interface SkillColumn {
+  heading: string;
+  skills: string[];
+}
+
+interface SkillCategory {
+  title: string;
+  columns: SkillColumn[];
+}
+
+const { categories } = Astro.props as { categories: SkillCategory[] };
+
+const skillLevels: Record<string, "green" | "yellow" | "red"> = {
+  // Green - Concept + Practical
+  ReactJS: "green",
+  NextJS: "green",
+  Astro: "green",
+  TailwindCSS: "green",
+  Bootstrap: "green",
+  HTML5: "green",
+  CSS3: "green",
+  JavaScript: "green",
+  TypeScript: "green",
+  MongoDB: "green",
+  MySQL: "green",
+  Array: "green",
+  Stack: "green",
+  Queue: "green",
+  "Linked List": "green",
+  "Doubly Linked List": "green",
+  "Circular Linked List": "green",
+  Hashing: "green",
+  "Binary Tree": "green",
+  "Binary Search Tree": "green",
+  Graph: "green",
+  NodeJS: "green",
+  ExpressJS: "green",
+    FastAPI: "yellow",
+    Flask: "yellow",
+    Stripe: "green",
+    Clerk: "green",
+    Kinde: "green",
+    "Gemini API": "green",
+    "DialogFlow": "green",
+    "Solana Reconciliation": "yellow",
+    "Sorting": "green",
+    "Binary Search": "green",
+    "Recursion": "green",
+    "Backtracking": "green",
+    "Greedy Algorithms": "green",
+    "Dynamic Programming": "green",
+    "Sliding Window": "green",
+    "Two Pointers": "green",
+    "Topological Sort": "green",
+    "Prefix Sum": "green",
+    "Kadane’s Algorithm": "green",
+    "KMP Algorithm": "green",
+    "Git": "green",
+  "GitHub": "green",
+  "VS Code": "green",
+  "Postman": "green",
+  "Google Apps Script": "green",
+
+
+  // Yellow - Conceptual Knowledge
+  "Linear Regression": "yellow",
+  "Logistic Regression": "yellow",
+  "Decision Tree": "yellow",
+  "Random Forest": "yellow",
+  "Ensemble Learning": "yellow",
+  "SVM": "yellow",
+  "KNN": "yellow",
+  "Clustering": "yellow",
+  "Dimensionality Reduction": "yellow",
+  "Trie": "yellow",
+  "Heap": "yellow",
+  "Firebase": "yellow",
+  "Prisma": "yellow",
+  "Webhooks": "yellow",
+  "Google Sheets": "yellow",
+  "Graph Algorithms (BFS, DFS, Dijkstra)": "yellow",
+    "Docker": "yellow",
+
+
+  // Red - Just Know About It
+  "Google Cloud Platform": "red",
+  "SQLite3": "red",
+  "SQLAlchemy": "red",
+};
+---
+
+<div id="skillsContainer">
+  {
+    categories.map((section) => (
+      <section class="mb-16 skill-section">
+        <h2 class="text-3xl font-bold mb-6">{section.title}</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          {section.columns.map((col) => (
+            <div class="prose dark:prose-invert max-w-none">
+              <h3 class="text-2xl font-semibold mb-4 relative inline-block">
+                {col.heading}
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full" />
+              </h3>
+              {/* bg-blue-500/5 text-blue-700 */}
+              <div class="flex flex-wrap gap-2">
+                {col.skills.map((tech) => {
+                  const level = skillLevels[tech] || null; // null if not in map
+
+                  // Base classes - blue background and text normally
+                  let baseClasses =
+                    "px-4 py-2 rounded-full text-sm font-medium transition-colors bg-blue-500/5 text-blue-700 dark:text-blue-300";
+
+                  // Hover color classes based on level
+                  let hoverClasses = "";
+
+                  if (level === "green") {
+                    hoverClasses = "hover:bg-green-500/40 hover:text-black";
+                  } else if (level === "yellow") {
+                    hoverClasses = "hover:bg-yellow-500/40 hover:text-black";
+                  } else if (level === "red") {
+                    hoverClasses = "hover:bg-red-500/40 hover:text-black";
+                  } else {
+                    // If skill not found, keep blue hover
+                    hoverClasses =
+                      "hover:bg-blue-500/10 hover:text-blue-900 dark:hover:text-blue-100";
+                  }
+
+                  return (
+                    <span class={`${baseClasses} ${hoverClasses}`}>{tech}</span>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</div>

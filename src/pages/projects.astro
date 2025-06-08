@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageSearch from "../components/PageSearch.astro";
+---
+
+<Layout
+  title="Projects"
+  description="Featured projects: Quickplan, qmims, Memlane, and Ideakit. Wassim Soltani delivers production-ready AI, SaaS, and cloud solutions with React, TypeScript, and Cloudflare Workers."
+>
+  <section class="container mx-auto px-8 sm:px-16 py-16">
+    <div class="mb-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-4">
+        <h1
+          class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400"
+        >
+          Featured Projects
+        </h1>
+        <a
+          href="/ai-chat"
+          class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-blue-600 transition-all text-sm mt-4 md:mt-0 w-auto self-start md:self-auto"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+            ></path>
+          </svg>
+          Ask AI
+        </a>
+      </div>
+      <p class="text-xl text-gray-600 dark:text-gray-400">
+        Built during different phases of my B.Tech journey — from learning to
+        launching. </p>These real-world projects helped me bridge the gap between
+        concepts and impact, turning ideas into practical solutions.
+      </p>
+    </div>
+
+    <!-- Page Search -->
+    <PageSearch />
+
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-6">
+        <h2 class="text-3xl font-bold">Zapier Automations</h2>
+        <a href="https://github.com/AarthiHonguthi/zapier-clone-project" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
+      </div>
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="text-xl mb-6">
+          Ongoing workflow automation project using Zapier and TypeScript to connect Google Forms, Sheets, Gmail, Slack, and more for streamlined data flow and notifications.
+        </p>
+        <h3 class="text-2xl font-semibold mt-8 mb-4 relative inline-block">
+          Technical Architecture
+          <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full"></span>
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Platform Logic:</strong> Automated workflows powered by <code>Zapier</code>, enhanced with custom <code>TypeScript</code> functions and <code>Google Apps Script</code>.</li>
+          <li><strong>System Integrations:</strong> Seamless data flow between <code>Google Forms → Sheets → Gmail → Slack</code>.</li>
+          <li><strong>Workflow Triggers:</strong> Real-time execution using secure <code>webhooks</code>.</li>
+          <li><strong>Reliability & Maintenance:</strong> Solana reconciliation logic to prevent double transactions after outages.</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mt-6">
+          {["TypeScript", "Zapier", "Google Apps Script", "Webhooks", "Prisma", "Solana Reconciliation"].map((tech) => (
+            <span class="px-4 py-2 bg-blue-500/5 hover:bg-blue-500/10 transition-colors rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">{tech}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Guest Connect -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-6">
+        <h2 class="text-3xl font-bold">Guest Connect</h2>
+        <a href="https://github.com/AarthiHonguthi/inspire-swinfy" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
+      </div>
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="text-xl mb-6">
+          An event management platform built during my internship at Swinfy, designed to streamline guest coordination and simplify payments, increasing logistical efficiency by 40%.
+        </p>
+        <h3 class="text-2xl font-semibold mt-8 mb-4 relative inline-block">
+          Technical Architecture
+          <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full"></span>
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Frontend:</strong> Next.js + TypeScript with TailwindCSS for clean, maintainable UI</li>
+          <li><strong>Payments:</strong> Secure Stripe integration</li>
+          <li><strong>Auth:</strong> Clerk-enabled role-based access control</li>
+          <li><strong>Collaboration:</strong> Built features in sync with backend and design teams</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mt-6">
+          {["Next.js", "TailwindCSS", "TypeScript", "Stripe", "Clerk"].map((tech) => (
+            <span class="px-4 py-2 bg-blue-500/5 hover:bg-blue-500/10 transition-colors rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">{tech}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Smart Chatbot -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-6">
+        <h2 class="text-3xl font-bold">Smart Chatbot</h2>
+        <a href="https://github.com/AarthiHonguthi/NaysaChatBot" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
+      </div>
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="text-xl mb-6">
+          An AI-powered food-order assistant that automates ordering via natural conversation and tracks progress in real-time.
+        </p>
+        <h3 class="text-2xl font-semibold mt-8 mb-4 relative inline-block">
+          Technical Architecture
+          <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full"></span>
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Chat Interface:</strong> DialogFlow NLP chatbot</li>
+          <li><strong>API Layer:</strong> FastAPI backend for order handling</li>
+          <li><strong>Database:</strong> MySQL for storing order data</li>
+          <li><strong>Recommendations:</strong> Personalized suggestions based on live user behavior</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mt-6">
+          {["DialogFlow", "FastAPI", "MySQL", "Python", "NLP"].map((tech) => (
+            <span class="px-4 py-2 bg-blue-500/5 hover:bg-blue-500/10 transition-colors rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">{tech}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <!-- SyncMeet -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-6">
+        <h2 class="text-3xl font-bold">SyncMeet</h2>
+        <a href="https://github.com/AarthiHonguthi/SyncMeet" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
+      </div>
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="text-xl mb-6">
+          A dynamic scheduling platform that enables seamless meeting bookings and real-time calendar updates. Users can manage slots effortlessly while minimizing conflicts.
+        </p>
+        <h3 class="text-2xl font-semibold mt-8 mb-4 relative inline-block">
+          Technical Architecture
+          <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full"></span>
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Frontend:</strong> Next.js + React SPA with TailwindCSS for fast, responsive UI</li>
+          <li><strong>Backend:</strong> Firebase real-time database & authentication</li>
+          <li><strong>Auth:</strong> Integrated Kinde for secure, role-based user access</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mt-6">
+          {["Next.js", "React", "Firebase", "TailwindCSS", "Kinde", "TypeScript"].map((tech) => (
+            <span class="px-4 py-2 bg-blue-500/5 hover:bg-blue-500/10 transition-colors rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">{tech}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Medico -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-6">
+        <h2 class="text-3xl font-bold">Medico</h2>
+        <a href="https://github.com/SlayZ121/Medico" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
+      </div>
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="text-xl mb-6">
+          A medical appointment portal featuring an AI chatbot for interactive student–doctor sessions and in-app BMI analysis.
+        </p>
+        <h3 class="text-2xl font-semibold mt-8 mb-4 relative inline-block">
+          Technical Architecture
+          <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full"></span>
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Frontend:</strong> Responsive UI with HTML, CSS, Bootstrap & JavaScript</li>
+          <li><strong>Bot:</strong> Gemini API chatbot for intuitive Q&A</li>
+          <li><strong>Backend:</strong> Flask app using SQLAlchemy and SQLite3 for appointments & data</li>
+          <li><strong>Utilities:</strong> BMI calculator, interactive medical record visualizations</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mt-6">
+          {["HTML/CSS", "Bootstrap", "JavaScript", "Flask", "SQLAlchemy", "SQLite3", "Gemini API"].map((tech) => (
+            <span class="px-4 py-2 bg-blue-500/5 hover:bg-blue-500/10 transition-colors rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">{tech}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+
+   
+
+    <!-- R&D Projects -->
+  </section>
+</Layout>

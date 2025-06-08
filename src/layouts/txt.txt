@@ -1,0 +1,2 @@
+ { path: '/projects', label: 'Projects', weight: 'normal' },
+  { path: '/skills', label: 'Skills', weight: 'normal' },

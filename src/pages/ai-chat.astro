@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="AI Chat"
+  description="Ask Aarthi Honguthi's AI assistant about his experience in software engineering, AI/ML, and cloud. He uses advanced AI tools to provide clear, technical answers about his background, projects, and skills."
+>
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h1
+        class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 mb-6 text-center"
+      >
+        Chat with AI Assistant
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 mb-12 text-center">
+        Ask questions about my experience, skills, or projects. This AI
+        assistant is trained to provide accurate information about me.
+      </p>
+
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-8"
+        style="height: 700px;"
+      >
+        <iframe
+          src="https://www.chatbase.co/chatbot-iframe/VDfI-v1rmb0mm_aaQRZr0"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          style="border-radius: 0.5rem;"
+          title="Aarthi's AI Assistant Chatbot"
+          allow="microphone; autoplay; encrypted-media"></iframe>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+        <h2 class="text-xl font-semibold mb-4">About this AI Assistant</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          This AI assistant is built using Chatbase, an advanced AI chatbot
+          platform. It integrates a custom-trained model designed to provide
+          detailed and accurate responses about my background, skills, and
+          projects.
+        </p>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          The assistant leverages natural language processing and
+          retrieval-augmented generation techniques to deliver real-time answers
+          based on my curated data. It is hosted seamlessly via an embedded
+          iframe, ensuring a smooth and responsive chat experience.
+        </p>
+        <ul
+          class="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-2 mb-4"
+        >
+          <li>My professional experience and background</li>
+          <li>Technical skills and expertise</li>
+          <li>Projects I've worked on</li>
+          <li>Education and certifications</li>
+          <li>My approach to software development</li>
+        </ul>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Note: The assistant is continuously updated to reflect my latest
+          achievements, but may occasionally not have the very newest info.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
