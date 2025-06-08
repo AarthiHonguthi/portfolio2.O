@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "pnpm run build && powershell -Command \"if (Test-Path temp-deploy) { Remove-Item -Recurse -Force temp-deploy }; git clone https://github.com/wSoltani/wSoltani.github.io.git temp-deploy; git -C temp-deploy rm -rf .; xcopy dist\\* temp-deploy\\ /E /Y; if (-not (Test-Path temp-deploy\\assets)) { mkdir temp-deploy\\assets }; xcopy dist\\assets\\* temp-deploy\\assets\\ /E /Y; git -C temp-deploy add .; git -C temp-deploy commit -m 'Update portfolio'; git -C temp-deploy push origin main; Remove-Item -Recurse -Force temp-deploy\""
+    "deploy": "npm run build && gh-pages -d dist -r https://github.com/AarthiHonguthi/portfolio2.O.git"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@astrojs/sitemap": "^3.3.1",
     "@astrojs/tailwind": "^6.0.2",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^3.4.17"
   },
   "description": "[![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue)]()\r [![Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38B2AC)](https://tailwindcss.com/)",
