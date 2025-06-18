@@ -11,7 +11,7 @@ const {
   title,
   description = "Software engineer at Vantage Labs LLC specializing in AI integration and high-performance applications. I transform complex challenges into elegant solutions with expertise in cloud architecture and edge computing.",
 } = Astro.props;
-const defaultImage = "/web-app-manifest-512x512.png";
+const defaultImage = `${import.meta.env.BASE_URL}web-app-manifest-512x512.png`;
 const siteName = "Aarthi Honguthi";
 
 // Get current path for active page detection
@@ -26,13 +26,33 @@ const isActive = (path: string) => {
 
 // Navigation items
 const navItems = [
-  { path: "/", label: "About", weight: "normal" },
-  { path: "/papershelf", label: "Papershelf", weight: "normal" },
+  { path: `${import.meta.env.BASE_URL}`, label: "About", weight: "normal" },
+  {
+    path: `${import.meta.env.BASE_URL}papershelf`,
+    label: "Papershelf",
+    weight: "normal",
+  },
   //insert here
-  { path: "/projects", label: "Projects", weight: "normal" },
-  { path: "/skills", label: "Skills", weight: "normal" },
-  { path: "/ai-chat", label: "AI Chat", weight: "bold" },
-  { path: "/connect", label: "Connect", weight: "bold" },
+  {
+    path: `${import.meta.env.BASE_URL}projects`,
+    label: "Projects",
+    weight: "normal",
+  },
+  {
+    path: `${import.meta.env.BASE_URL}skills`,
+    label: "Skills",
+    weight: "normal",
+  },
+  {
+    path: `${import.meta.env.BASE_URL}ai-chat`,
+    label: "AI Chat",
+    weight: "bold",
+  },
+  {
+    path: `${import.meta.env.BASE_URL}connect`,
+    label: "Connect",
+    weight: "bold",
+  },
 ];
 ---
 
@@ -41,11 +61,24 @@ const navItems = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="icon"
+      type="image/png"
+      href={`${import.meta.env.BASE_URL}favicon-96x96.png`}
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}favicon.svg`}
+    />
+    <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={`${import.meta.env.BASE_URL}apple-touch-icon.png`}
+    />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}site.webmanifest`} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Google tag (gtag.js) -->
@@ -86,15 +119,16 @@ const navItems = [
     >
       <div class="container mx-auto px-8 sm:px-16 py-2">
         <nav class="flex items-center gap-8">
-          <a href="/" class="flex items-center gap-3 group">
+          <a href="/portfolio2.O/" class="flex items-center gap-3 group">
             <Image
-              src="/avatar.png"
+              src={`${import.meta.env.BASE_URL}avatar.png`}
               alt="Profile Avatar"
               width={40}
               height={40}
               loading="eager"
               class="w-10 h-10 rounded-full object-cover border-2 border-blue-500/20 group-hover:border-blue-500/40 transition-colors"
             />
+
             <span
               class="font-semibold text-xl text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
               >@artyCodes</span
@@ -182,7 +216,7 @@ const navItems = [
         </p>
         <div class="flex gap-4">
           <a
-            href="https://github.com/wSoltani"
+            href="https://github.com/AarthiHonguthi"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-blue-600 flex items-center gap-2"
@@ -200,7 +234,7 @@ const navItems = [
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/wsoltani"
+            href="https://www.linkedin.com/in/aarthi-honguthi-b01838257/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-blue-600 flex items-center gap-2"

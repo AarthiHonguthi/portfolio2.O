@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   title="Connect"
-  description="Wassim Soltani is interested in new projects, technical challenges, and meaningful collaborations. Connect to discuss how he can help solve your toughest software and AI problems."
+  description="Aarthi Honguthi is interested in new projects, technical challenges, and meaningful collaborations. Connect to discuss how he can help solve your toughest software and AI problems."
 >
   <section class="container mx-auto px-4 py-16">
     <div class="max-w-4xl mx-auto">
@@ -86,7 +86,11 @@ import Layout from "../layouts/Layout.astro";
             aria-label="Follow me on Medium"
           >
             <div class="bg-gray-100 dark:bg-gray-900/30 p-2 rounded-lg">
-              <img src="./medium.png" alt="Medium Icon" class="h-6 w-6" />
+              <img
+                src={`${import.meta.env.BASE_URL}medium.png`}
+                alt="Medium Icon"
+                class="h-6 w-6"
+              />
             </div>
             <div>
               <div class="font-medium">Medium</div>
@@ -131,7 +135,7 @@ import Layout from "../layouts/Layout.astro";
       <!-- Personal Interests -->
       <div
         class="rounded-lg shadow-sm p-8 mb-16 overflow-hidden relative"
-        style="background-image: url('/hero-dark.webp'); background-size: cover; background-position: center;"
+        style={`background-image: url('/portfolio2.O/hero-dark.webp'); background-size: cover; background-position: center;`}
       >
         <div class="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
 
@@ -264,7 +268,7 @@ import Layout from "../layouts/Layout.astro";
         class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 mb-16"
         style="background: 
   radial-gradient(circle, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.1) 100%),
-  url('/satin.webp') center/cover no-repeat; background-blend-mode: lighten, normal;"
+  url('/portfolio2.O/satin.webp') center/cover no-repeat; background-blend-mode: lighten, normal;"
       >
         <h2 class="text-2xl font-bold mb-2 text-center">Send Me a Message</h2>
         <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 text-center">
