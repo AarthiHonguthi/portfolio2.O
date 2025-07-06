@@ -48,25 +48,28 @@ import PageSearch from "../components/PageSearch.astro";
 
     <div class="mb-16">
       <div class="flex items-center gap-4 mb-6">
-        <h2 class="text-3xl font-bold">Zapier Automations</h2>
-        <a href="https://github.com/AarthiHonguthi/zapier-clone-project" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
+        <h2 class="text-3xl font-bold">Flow_Forge Automations</h2>
+        <a href="https://github.com/AarthiHonguthi/Flow_Forge" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Source Code→</a>
       </div>
       <div class="prose dark:prose-invert max-w-none">
         <p class="text-xl mb-6">
-          Ongoing workflow automation project using Zapier and TypeScript to connect Google Forms, Sheets, Gmail, Slack, and more for streamlined data flow and notifications.
+          Ongoing workflow automation project using Flow_Forge and TypeScript to connect Google Forms, Sheets, Gmail, Slack, and more for streamlined data flow and notifications.
         </p>
         <h3 class="text-2xl font-semibold mt-8 mb-4 relative inline-block">
           Technical Architecture
           <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500/20 rounded-full"></span>
         </h3>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>Platform Logic:</strong> Automated workflows powered by <code>Zapier</code>, enhanced with custom <code>TypeScript</code> functions and <code>Google Apps Script</code>.</li>
-          <li><strong>System Integrations:</strong> Seamless data flow between <code>Google Forms → Sheets → Gmail → Slack</code>.</li>
-          <li><strong>Workflow Triggers:</strong> Real-time execution using secure <code>webhooks</code>.</li>
-          <li><strong>Reliability & Maintenance:</strong> Solana reconciliation logic to prevent double transactions after outages.</li>
+          <li><strong>Frontend:</strong> Built with <code>Next.js</code> and <code>TypeScript</code>, styled using <code>TailwindCSS</code> for a responsive, dashboard-style UI to manage automation pipelines.</li>
+          <li><strong>Backend Services:</strong> Modular microservices developed using <code>Node.js</code> and <code>Express</code>, each handling dedicated roles like hooks, workers, and processors.</li>
+          <li><strong>Messaging Layer:</strong> Asynchronous, decoupled task handling powered by <code>Kafka</code> for high-throughput event streaming.</li>
+          <li><strong>Database:</strong> Integrated <code>PostgreSQL</code> with <code>Prisma ORM</code> across all services, enabling consistent, type-safe schema and migration management.</li>
+          <li><strong>Blockchain:</strong> Incorporated <code>Solana Web3.js</code> for blockchain-based automation, smart contract events, and decentralized operations.</li>
+          <li><strong>Collaboration:</strong> Developed in sync with a modular service structure and Kafka flow to enable efficient team collaboration, parallel development, and easier debugging.</li>
         </ul>
+        
         <div class="flex flex-wrap gap-2 mt-6">
-          {["TypeScript", "Zapier", "Google Apps Script", "Webhooks", "Prisma", "Solana Reconciliation"].map((tech) => (
+          {["TypeScript", "Flow_Forge", "Google Apps Script", "Webhooks", "Prisma", "Solana Reconciliation"].map((tech) => (
             <span class="px-4 py-2 bg-blue-500/5 hover:bg-blue-500/10 transition-colors rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">{tech}</span>
           ))}
         </div>
